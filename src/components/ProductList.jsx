@@ -53,7 +53,7 @@ function ProductList() {
               <img
                 src={product.img}
                 alt={product.title}
-                className="w-full h-56 object-cover rounded-lg mb-4"
+                className="w-72 h-56 object-cover rounded-lg mb-4"
               />
               <h2 className="text-2xl font-semibold text-gray-800 text-center">{product.title}</h2>
             </div>

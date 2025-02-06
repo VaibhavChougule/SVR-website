@@ -34,7 +34,7 @@ function Downloads() {
   return (
     <>
       <Header />
-      <div className="bg-gray-100 py-16 px-8">
+      <div className="bg-gradient-to-r from-blue-100 to-blue-200 py-16 px-8">
         {/* Main Heading */}
         <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
           Downloads

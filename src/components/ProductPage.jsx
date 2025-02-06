@@ -20,7 +20,7 @@ const ProductPage = () => {
       title: "FMS",
       link: "fms",
       items: [
-        ["Flexible/Electrofab/Modular/Smart Manufacturing System", "fms"],
+        ["Flexible Manufacturing System", "fms"],
       ],
     },
     {

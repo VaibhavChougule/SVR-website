@@ -89,7 +89,7 @@ const Careers = () => {
   return (
     <>
       <Header />
-      <div className="p-6 font-sans text-gray-800 bg-gradient-to-br from-blue-200 to-blue-300">
+      <div className="p-6 font-sans text-gray-800 bg-gradient-to-r from-blue-100 to-blue-200">
         {/* Header Section */}
         <header className="text-center mb-10 ">
           <h1 className="text-4xl font-bold mb-4">Be part of our mission</h1>

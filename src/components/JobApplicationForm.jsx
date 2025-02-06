@@ -38,6 +38,7 @@ const JobApplicationForm = () => {
     applicationData.append("category", formData.category);
     applicationData.append("resume", formData.resume);
     applicationData.append("coverLetter", formData.coverLetter);
+    console.log(applicationData)
 
     try {
       const response = await fetch(`${config.API_URI}/api/jobApplications`, {

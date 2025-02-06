@@ -8,50 +8,44 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
-  const [organization, setOrganization] = useState('');
-  const [category, setCategory] = useState('');
-  const [image, setImage] = useState(null);
 
   const handleForm = (event) => {
     event.preventDefault(); // Prevent page reload
-    if (!name || !email || !message || !mobile || !organization || !category || !image) {
+    if (!name || !email || !message || !mobile) {
       alert('Please fill out all fields.');
       return;
     }
 
     // Simulate form submission
-    console.log('Form submitted:', { name, email, mobile, organization, category, message, image });
+    console.log('Form submitted:', { name, email, mobile , message });
 
-    const formData = new FormData();
-    formData.append('name', name);
-    formData.append('email', email);
-    formData.append('mobile', mobile);
-    formData.append('organization', organization);
-    formData.append('category', category);
-    formData.append('message', message);
-    formData.append('image', image);
+    const f = fetch(`${config.API_URI}/api/connectUs` , {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method:'POST',
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        mobile:mobile,
+        message: message,
+      })
+    })
 
-    const f = fetch(`${config.API_URI}/api/connectUs`, {
-      method: 'POST',
-      body: formData,
-    });
-
-    f.then(() => {
-      console.log("Data sent successfully");
-    }).catch((err) => {
+    f.then(() =>{
+      console.log("data sent suceessfullyy");
+    })
+    f.catch((err) =>{
       console.log(err);
-    });
-
+      
+    })
     alert(`Thank you, ${name}! Your message has been sent.`);
-
+    
     // Clear form fields
     setName('');
     setEmail('');
-    setMobile('');
+    setMobile('')
     setMessage('');
-    setOrganization('');
-    setCategory('');
-    setImage(null);
   };
 
   return (
@@ -138,55 +132,15 @@ function Contact() {
                   <label htmlFor="mobile" className="block mb-1 text-lg font-semibold">
                     Mobile No.
                   </label>
-                  <input
-                    type="text"
+                  <input 
+                    type='number'
                     id="mobile"
                     className="w-full p-2 rounded bg-gray-700 text-white focus:outline-none"
                     placeholder="Your Mobile No."
                     value={mobile}
                     onChange={(event) => setMobile(event.target.value)}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="organization" className="block mb-1 text-lg font-semibold">
-                    Organization Name
-                  </label>
-                  <input
-                    type="text"
-                    id="organization"
-                    className="w-full p-2 rounded bg-gray-700 text-white focus:outline-none"
-                    placeholder="Your Organization"
-                    value={organization}
-                    onChange={(event) => setOrganization(event.target.value)}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="category" className="block mb-1 text-lg font-semibold">
-                    Category
-                  </label>
-                  <select
-                    id="category"
-                    className="w-full p-2 rounded bg-gray-700 text-white focus:outline-none"
-                    value={category}
-                    onChange={(event) => setCategory(event.target.value)}
-                  >
-                    <option value="">Select a Category</option>
-                    <option value="Maintenance">Maintenance</option>
-                    <option value="Product Details">Product Details</option>
-                    <option value="Training and Workshop">Training and Workshop</option>
-                    <option value="Setup and Costing">Setup and Costing</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="image" className="block mb-1 text-lg font-semibold">
-                    Upload Image
-                  </label>
-                  <input
-                    type="file"
-                    id="image"
-                    className="w-full p-2 rounded bg-gray-700 text-white focus:outline-none"
-                    onChange={(event) => setImage(event.target.files[0])}
-                  />
+                    
+                  ></input>
                 </div>
                 <div>
                   <label htmlFor="message" className="block mb-1 text-lg font-semibold">
@@ -211,31 +165,6 @@ function Contact() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="container mx-auto py-6 px-4 border-t mt-8">
-        <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-        <ul className="space-y-4">
-          <li>
-            <strong>What services does your company provide?</strong>
-            <p>We specialize in both educational and application-based robotics solutions and can customize them to suit your needs.</p>
-          </li>
-          <li>
-            <strong>Where are your offices located?</strong>
-            <p>Our headquarters are in Pune, Maharashtra, India, with global support available online.</p>
-          </li>
-          <li>
-            <strong>How do I raise a support ticket?</strong>
-            <p>You can use the support page on our website to submit your request or email your query to support@svrinfotech.net.</p>
-          </li>
-          <li>
-            <strong>What is the typical response time for customer support?</strong>
-            <p>Our support team aims to respond to queries within 24-48 hours.</p>
-          </li>
-          <li>
-            <strong>Do you provide training in robotics and automation?</strong>
-            <p>We offer training services for students and professionals in robotics, automation, and related technologies.</p>
-          </li>
-        </ul>
       </div>
       <Footer />
     </>

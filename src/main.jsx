@@ -13,6 +13,7 @@ import Support from './components/Support.jsx'
 import Dashboard from './components/Dashboard.jsx'
 import JobApplicationForm from './components/JobApplicationForm.jsx'
 import SpecificProduct from './components/SpecificProduct.jsx'
+import Employee from './components/Employee.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')).render(
     <Route path='/Support' element={<Support/>}></Route>
     <Route path='/JobApplicationForm' element={<JobApplicationForm/>}></Route>
     <Route path='/Admin' element={<Dashboard/>}></Route>
+    <Route path='/Emp/:ticketId' element={<Employee/>}></Route>
   </Routes>
   </BrowserRouter>
 )

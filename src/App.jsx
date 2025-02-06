@@ -46,7 +46,7 @@ function App() {
               <h1
                 className={`text-2xl md:text-4xl text-white font-semibold font-serif transition-all duration-1000 ease-in-out ${animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
                   }`}
-                  style={{textShadow:'1px 3px 3px yellow'}}
+                  // style={{textShadow:'1px 3px 3px yellow'}}
               >
                 Transforming Industries through Turnkey Robotics and Automation Implementations.
               </h1>
