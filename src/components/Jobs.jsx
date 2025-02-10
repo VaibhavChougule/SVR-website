@@ -47,6 +47,10 @@ const Jobs = () => {
               <p className="text-gray-600">Email: {application.email}</p>
               <p className="text-gray-600">Phone: {application.phone}</p>
               <p className="text-gray-600">Position: {application.category}</p>
+              {application.coverLetter && (
+                <p className="text-gray-600">Cover Letter: {application.coverLetter}</p>
+              )}
+              {/* <p className="text-gray-600">Cover Letter: {application.coverLetter}</p> */}
               {application.resumePath && (
                 <a
                   href={application.resumePath}

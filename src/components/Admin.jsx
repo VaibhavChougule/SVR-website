@@ -125,6 +125,7 @@ const Dashboard = () => {
     }
   };
 
+
   const renderContent = () => {
     switch (selectedCategory) {
       case "Maintenance":
@@ -288,93 +289,15 @@ const Dashboard = () => {
           </button>
         ))}
       </div>
-
-      {loading && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-4" onClick={() => setLoading(false)}>
-          {/* <img src={modalImage} alt="Large Preview" className="max-w-full max-h-full rounded shadow-lg" /> */}
-          <h1>Loading..</h1>
-        </div>
-      )}
+  
+      {loading && <h1 className="text-center">Loading...</h1>}
       {error && <p className="text-red-500 text-center">{error}</p>}
-
-      {popupData.length > 0 && (
-        <div className="bg-slate-700 p-6 rounded shadow-md overflow-x-auto">
-          <h2 className="text-2xl font-semibold text-sky-400 mb-4">{selectedCategory}</h2>
-          <table className="w-full border border-slate-700 min-w-[600px]">
-            <thead>
-              <tr className="bg-slate-600 text-sm">
-                {allKeys.map((header) => (
-                  <th key={header} className="px-4 py-2 text-left border border-slate-600">
-                    {header}
-                  </th>
-                ))}
-                <th className="px-4 py-2 text-left border border-slate-600">Assign Engineer</th>
-                <th className="px-4 py-2 text-left border border-slate-600">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {popupData.map((item, index) => (
-                <tr key={index} className="bg-slate-700 hover:bg-slate-600 text-sm">
-                  {allKeys.map((field) => (
-                    <td key={field} className="px-4 py-2 border border-slate-600">
-                      {field.toLowerCase().includes("image") && item[field] ? (
-                        <img
-                          src={item[field]}
-                          alt="Preview"
-                          className="w-20 h-20 object-cover cursor-pointer"
-                          onClick={() => setModalImage(item[field])}
-                        />
-                      ) : (
-                        item[field] || "N/A"
-                      )}
-                    </td>
-                  ))}
-                  {item.status !== "Completed" ? (
-                    <>
-                      <td className="px-4 py-2 border border-slate-600">
-                        <select
-                          onChange={(e) => setEngineerAssignments({ name: e.target.value })}
-                          className="bg-slate-600 text-white p-1 rounded w-full"
-                        >
-                          <option value="">Select Engineer</option>
-                          {["Ankita Bhosale", "Sanket Patil", "Jayesh", "Vaibhav Chougule"].map((name, idx) => (
-                            <option key={idx} value={name}>
-                              {name}
-                            </option>
-                          ))}
-                        </select>
-                      </td>
-                      <td className="px-4 py-2 border border-slate-600">
-                        <button
-                          onClick={() => handleAssignEngineer(item.ticketId)}
-                          className="bg-green-500 text-white px-4 py-1 rounded"
-                        >
-                          Assign
-                        </button>
-                      </td>
-                    </>
-                  ) : (
-                    <>
-                      <td className="px-4 py-2 border border-slate-600 text-center text-gray-400" colSpan="2">
-                        Completed
-                      </td>
-                    </>
-                  )}
-
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-
-      {modalImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-4" onClick={() => setModalImage(null)}>
-          <img src={modalImage} alt="Large Preview" className="max-w-full max-h-full rounded shadow-lg" />
-        </div>
-      )}
+  
+      {/* Display different content based on selected category */}
+      {renderContent()}
     </div>
   );
+  
 };
 
 export default Dashboard;
