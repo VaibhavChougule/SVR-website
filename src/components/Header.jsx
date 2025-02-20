@@ -243,7 +243,7 @@ const Header = () => {
             onMouseLeave={(e) => (e.target.style.backgroundColor = "#0b6085")}
             onClick={() => setMenuOpen(false)}
           >
-            Need Help?
+            Support
           </Link>
           {/* Add other links here following the same pattern */}
         </nav>

@@ -10,6 +10,7 @@ function Employee() {
   const [error, setError] = useState(null);
   const [daysRequired, setDaysRequired] = useState({});
   const [daysAllocated, setDaysAllocated] = useState(null);
+  const [sendingFeedback, setSendingFeedback] = useState(false);
 
   useEffect(() => {
     fetchQuery();
@@ -21,7 +22,6 @@ function Employee() {
       const res = await fetch(`${config.API_URI}/api/emp/${ticketId}`);
       if (!res.ok) throw new Error('Failed to fetch data');
       const data = await res.json();
-
       if (data[0].daysRequired) {
         setDaysAllocated(data[0].daysRequired);
       }
@@ -35,6 +35,7 @@ function Employee() {
   };
 
   const handleSendFeedback = async (queryId) => {
+    setSendingFeedback(true);
     try {
       let res = await fetch(`${config.API_URI}/api/emp/sendFeedback`, {
         method: 'POST',
@@ -42,8 +43,12 @@ function Employee() {
         body: JSON.stringify({ queryId, feedback: 'Feedback sent successfully.' }),
       });
       if (!res.ok) throw new Error('Failed to send feedback');
+      alert('Feedback sent successfully!');
+      await fetchQuery(); // Refresh the data after feedback is sent
     } catch (error) {
       console.error('Error while sending feedback:', error.message);
+    } finally {
+      setSendingFeedback(false);
     }
   };
 
@@ -120,9 +125,12 @@ function Employee() {
                   <td className="px-4 py-2 border border-slate-600">
                     <button
                       onClick={() => handleSendFeedback(item.ticketId)}
-                      className="bg-green-500 text-white px-4 py-1 rounded w-full"
+                      className={`px-4 py-1 rounded w-full ${
+                        sendingFeedback ? 'bg-gray-500 cursor-not-allowed' : 'bg-green-500 text-white'
+                      }`}
+                      disabled={sendingFeedback}
                     >
-                      Send Feedback Form
+                      {sendingFeedback ? 'Sending...' : 'Send Feedback Form'}
                     </button>
                   </td>
                 </tr>

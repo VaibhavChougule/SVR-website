@@ -49,34 +49,30 @@ const Careers = () => {
     },
     {
       title: "Sales and Marketing Representative",
-      description:
-        "Looking for a dynamic sales representative with 2–3 years of experience in inside sales. Candidates with a background in E&TC, Computer, or Electronics are preferred.",
-      location: "On-site",
-      type: "Full-time",
+      description: "Currently, there are no vacancies available for Electronics Engineers.",
+      location: "N/A",
+      type: "N/A",
       category: "Sales & Marketing",
     },
     {
       title: "Internship - Mechanical/Civil",
-      description:
-        "Perform mechanical design hand calculations, FEA validation, and prepare manuals. Requires relevant analytical skills and expertise in tools like Hypermesh and ANSYS.",
-      location: "On-site",
-      type: "Full-time Internship (6 months)",
+      description: "Currently, there are no vacancies available for Electronics Engineers.",
+      location: "N/A",
+      type: "N/A",
       category: "Internship",
     },
     {
       title: "Internship - Software Development",
-      description:
-        "Solve mathematical problems, optimize algorithms, and create data structures. Experience in Linux, C++ programming, and algorithms required.",
-      location: "On-site",
-      type: "Full-time Internship (3 months)",
+      description: "Currently, there are no vacancies available for Electronics Engineers.",
+      location: "N/A",
+      type: "N/A",
       category: "Internship",
     },
     {
       title: "Internship - Software Developer",
-      description:
-        "Solve mathematical problems, work on hybrid app development (Android/iOS), and optimize algorithms. Skills in GitHub, Android/iOS, C++ programming, and Java are required.",
-      location: "On-site",
-      type: "Full-time Internship (3 months)",
+      description: "Currently, there are no vacancies available for Electronics Engineers.",
+      location: "N/A",
+      type: "N/A",
       category: "Internship",
     },
   ];

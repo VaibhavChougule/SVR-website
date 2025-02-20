@@ -12,12 +12,12 @@ const ProductInformation = {
     description: "Complete Product description",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
-    // specifications: [
-      // { key1: "value1" },
-      // { key2: "value2" },
-    // ],
-    // links: ["abc.com", "xyz.com"],
-    // document: ["path1", "path2"],
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
   },
   cncvmclab: {
     title: "CNC VMC Lab",
@@ -25,12 +25,12 @@ const ProductInformation = {
     description: "COMPLETE PRODUCT DESCRIPTION",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
-    // specifications: [
-    //   { key1: "value1" },
-    //   { key2: "value2" },
-    // ],
-    // links: ["abc.com", "xyz.com"],
-    // document: ["path1", "path2"],
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
   },
   scararobot: {
     title: "Scara Robot",
@@ -39,13 +39,13 @@ const ProductInformation = {
     features: ["High speed & high performance for the application in single planer.",
        "Integrating with multiple grippers with a robot to optimize operations",
       "Robot safety standard has been followed during installation like MCB, Stabilizer, SPD, PLC, standard wiring, etc. at SVR"],
-    blueprintImages: ['../src/assets/AI robot.jpg', '../src/assets/AI robot.jpg'],
-    // specifications: [
-      // { key1: "value1" },
-      // { key2: "value2" },
-    // ],
+    // blueprintImages: ['../src/assets/AI robot.jpg', '../src/assets/AI robot.jpg'],
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
     links: ["https://www.youtube.com/embed/u6KsQ8_4qq8?si=nqjsc9-ooQyu4dPE", "https://www.youtube.com/embed/u6KsQ8_4qq8?si=nqjsc9-ooQyu4dPE"],
-    // document: ["path1", "path2"],
+    document: ["path1", "path2"],
   },
   cobot: {
     title: "Cobot",
@@ -65,8 +65,8 @@ const ProductInformation = {
       { "Additional features": "Touch screen control panel with LED display on the robot arm indicating the status." },
 
     ],
-    // links: ["abc.com", "xyz.com"],
-    // document: ["path1", "path2"],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
   },
   articulatedrobot: {
     title: "Articulated Robot",
@@ -82,12 +82,12 @@ const ProductInformation = {
       "User-friendly software for program Robotics Programming.",
       "Comes with a Robot + Teach pendent + Controller + Industrial grade cell."],
     /*blueprintImages: ["path1", "path2"],*/
-    // specifications: [
-    //   { key1: "value1" },
-    //   { key2: "value2" },
-    // ],
-    // links: ["abc.com", "xyz.com"],
-    // document: ["path1", "path2"],
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
   },
   cartesianrobot: {
     title: "Cartesian Robot",
@@ -99,12 +99,12 @@ const ProductInformation = {
       "Enhanced Reliability: Robust PLC systems and precise encoders ensure consistent performance, reducing downtime and maintenance costs.",
     ],
     /*blueprintImages: ["path1", "path2"],*/
-    // specifications: [
-    //   { key1: "value1" },
-    //   { key2: "value2" },
-    // ],
-    // links: ["abc.com", "xyz.com"],
-    // document: ["path1", "path2"],
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
   },
   fms: {
     title: "Flexible Manufacturing System",
@@ -125,12 +125,12 @@ const ProductInformation = {
 
     ],
     /*blueprintImages: ["path1", "path2"],*/
-    // specifications: [
-    //   { key1: "value1" },
-    //   { key2: "value2" },
-    // ],
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
     links: ["https://www.youtube.com/embed/IE5XVANBxaU?si=3JVUbhrumBPkp94w", "https://www.youtube.com/embed/4YTySpU-iHw?si=hwMA097ybdfsRszz"],
-    // document: ["path1", "path2"],
+    document: ["path1", "path2"],
   },
   electrohyrdaulic: {
     title: "IoT, PLC, Manual Based Electro-Hydraulic System",
@@ -138,12 +138,12 @@ const ProductInformation = {
     description: "An Electro-Hydraulic System designed for experiments like single/double-acting cylinder, regenerative circuit, pump unloading circuit, cylinder sequencing/reciprocating circuit, cylinder locking circuit, and cylinder synchronization. The system supports manual, PLC-based, and IoT-based operations. It includes components from Festo, Genetic, and Bash.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
-    // specifications: [
-    //   { key1: "value1" },
-    //   { key2: "value2" },
-    // ],
-    // links: ["abc.com", "xyz.com"],
-    // document: ["path1", "path2"],
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
   },
   electropneumatic: {
     title: "IoT, PLC, Manual Based Electro-Pneumatic System",
@@ -151,12 +151,12 @@ const ProductInformation = {
     description: "An Electro-Pneumatic System with manual, PLC-based, and IoT-based operations. Experiments include direct cylinder actuation, use of 5/3 valve as a memory valve, two-cylinder coordinated motion control, sequential motion control, and pressure circuits. Components are mounted on an industrial-grade panel for rigidity, featuring parts from Festo and Genetic.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
-    // specifications: [
-    //   { key1: "value1" },
-    //   { key2: "value2" },
-    // ],
-    // links: ["abc.com", "xyz.com"],
-    // document: ["path1", "path2"],
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
   },
   bottlefillingplant: {
     title: "Bottle Filling Plant ",
@@ -164,12 +164,12 @@ const ProductInformation = {
     description: "An IoT-enabled bottle filling plant with SCADA integration for water usage monitoring, PLC-based controllers for precise operation, and scalable production. Features include a user-friendly interface, quality control mechanisms, energy-efficient components, and robust construction for industrial environments.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
-    // specifications: [
-    //   { key1: "value1" },
-    //   { key2: "value2" },
-    // ],
-    // links: ["abc.com", "xyz.com"],
-    // document: ["path1", "path2"],
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
   },
   jawconcentricgripper: {
     title: "3-Jaw Concentric Gripper",
@@ -185,12 +185,12 @@ const ProductInformation = {
 
     ],
     /*blueprintImages: ["path1", "path2"],*/
-    // specifications: [
-    //   { key1: "value1" },
-    //   { key2: "value2" },
-    // ],
-    // links: ["abc.com", "xyz.com"],
-    // document: ["path1", "path2"],
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
   },
   suctioncupgripper: {
     title: "Suction Cup Gripper",

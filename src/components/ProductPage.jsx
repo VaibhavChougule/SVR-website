@@ -116,7 +116,8 @@ const ProductPage = () => {
                     <li key={i} className="flex items-center">
                       <span className="bg-orange-500 h-3 w-3 rounded-full inline-block mr-3"></span>
                       <Link
-                        to={`/Product/${item[1]}`}
+                        to={`/ProductDetails/${section.link}`}
+                        // to={`/Product/${item[1]}`}
                         state={{ stateParam: section }}
                         className="text-lg text-black hover:text-orange-300 transition-colors duration-300"
                       >

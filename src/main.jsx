@@ -16,6 +16,7 @@ import JobApplicationForm from './components/JobApplicationForm.jsx'
 import SpecificProduct from './components/SpecificProduct.jsx'
 import Employee from './components/Employee.jsx'
 import Client from './components/Client.jsx'
+import Chatbox from './components/Chatbox.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -32,6 +33,7 @@ createRoot(document.getElementById('root')).render(
     <Route path='/JobApplicationForm' element={<JobApplicationForm/>}></Route>
     <Route path='/Admin' element={<Dashboard/>}></Route>
     <Route path='/Demo' element={<Admin/>}></Route>
+    <Route path='/Chatbox' element={<Chatbox/>}></Route>
     <Route path='/emp/:ticketId' element={<Employee/>}></Route>
     <Route path='/client/:ticketId' element={<Client/>}></Route>
   </Routes>

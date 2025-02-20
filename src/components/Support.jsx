@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import config from "../config.js";
+import Chatbox from "./Chatbox.jsx";
 
 const Support = () => {
   const [maintenanceData, setMaintenanceData] = useState({
@@ -43,6 +44,12 @@ const Support = () => {
   });
 
   const [visibleForm, setVisibleForm] = useState(null);
+  const [isChatboxOpen, setIsChatboxOpen] = useState(true);
+  const [modal, setModal] = useState(false)
+
+  const handleChatboxClose = () => {
+    setIsChatboxOpen(false);
+  };
 
   const handleChange = (e, formType) => {
     const { name, value } = e.target;
@@ -90,7 +97,7 @@ const Support = () => {
       formDataToSend.append("message", productData.message);
       // if (productData.image) formDataToSend.append("image", productData.image);
       console.log("inside product");
-      
+
     } else if (formType === "Training and Workshop") {
       formDataToSend.append("fullName", trainingData.fullName);
       formDataToSend.append("email", trainingData.email);
@@ -108,45 +115,37 @@ const Support = () => {
       // if (setupData.image) formDataToSend.append("image", setupData.image);
     }
 
-    // try {
-    //   const response = await fetch(`${config.API_URI}/api/${formType.toLowerCase()}`, {
-    //     method: "POST",
-    //     body: formDataToSend,
-    //   });
 
-    //   if (response.ok) {
-    //     alert(`${formType} form submitted successfully!`);
-    //     resetForm(formType);
-    //     setVisibleForm(null);
-    //   } else {
-    //     alert("Failed to submit the form. Please try again.");
-    //   }
-    // } catch (error) {
-    //   console.error("Error:", error);
-    //   alert("An error occurred. Please try again later.");
-    // }
-
-    formDataToSend.append("formType" , formType);
-    console.log("submitted:" , formType);
-    console.log("formdata Name:" , formDataToSend.get("fullName"));
-    
-    fetch(`${config.API_URI}/api/support` , 
+    formDataToSend.append("formType", formType);
+    console.log("submitted:", formType);
+    console.log("formdata Name:", formDataToSend.get("fullName"));
+    setModal(true);
+    fetch(`${config.API_URI}/api/support`,
       {
-        method:"POST",
-        body:formDataToSend
+        method: "POST",
+        body: formDataToSend
       })
-    .then((res)=>{
-      return res.json();
-    })
-    .then((data) =>{
-      console.log("response:", data);
-      
-    })
-    .catch((e)=>{
-      console.log("Error while submitting the form:" , e);
-    })
-    
-    
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log("response:", data);
+        if(data.success === false){
+          setModal(false)
+          alert(data.message);
+          return;
+        }
+        setModal(false)
+        resetForm(formType);
+        setVisibleForm(null)
+        alert(data.message)
+
+      })
+      .catch((e) => {
+        console.log("Error while submitting the form:", e);
+      })
+
+
   };
 
   const resetForm = (formType) => {
@@ -159,7 +158,7 @@ const Support = () => {
         query: "",
         image: null,
       });
-    } else if (formType === "Product") {
+    } else if (formType === "Product Details") {
       setProductData({
         fullName: "",
         email: "",
@@ -169,7 +168,7 @@ const Support = () => {
         message: "",
         image: null,
       });
-    } else if (formType === "Training") {
+    } else if (formType === "Training and Workshop") {
       setTrainingData({
         fullName: "",
         email: "",
@@ -178,7 +177,7 @@ const Support = () => {
         message: "",
         image: null,
       });
-    } else if (formType === "Setup") {
+    } else if (formType === "Setup and Costing") {
       setSetupData({
         fullName: "",
         email: "",
@@ -411,8 +410,24 @@ const Support = () => {
         </ul>
       </div>
 
+      {/* Chatbox Component */}
+      {isChatboxOpen && (
+        <div className="fixed bottom-6 right-6 z-50 w-auto">
+          <Chatbox onClose={handleChatboxClose} />
+        </div>
+      )}
+
+      {modal && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-4" onClick={() => setLoading(false)}>
+          {/* <img src={modalImage} alt="Large Preview" className="max-w-full max-h-full rounded shadow-lg" /> */}
+          <h1>Loading..</h1>
+        </div>
+      )}
+
+
       <Footer />
     </>
+
   );
 
 };
