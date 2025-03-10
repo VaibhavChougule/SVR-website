@@ -51,7 +51,7 @@ function Contact() {
   return (
     <>
       <Header />
-      <div className="relative bg-[url('../src/assets/eventimg.jpg')] bg-no-repeat bg-cover bg-center w-screen flex flex-col items-center justify-center">
+      <div className="relative bg-[url('/assets/eventimg.jpg')] bg-no-repeat bg-cover bg-center w-screen flex flex-col items-center justify-center">
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
 

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
-import bg from "../assets/bg.jpg";
-import homeRobotImage from "../assets/home-robot.jpg"; // Import image
-import fmsImage from "../assets/fms.jpg";
-import innovationImg from "../assets/innImg.jpeg";
-import gripper from "../assets/Gripper img.jpg";
-import plc from "../assets/plc application.jpg";
-import software from "../assets/software.jpg";
-import school from "../assets/school.jpg";
+import bg from "/assets/bg.jpg";
+import homeRobotImage from "/assets/home-robot.jpg"; // Import image
+import fmsImage from "/assets/fms.jpg";
+import innovationImg from "/assets/innImg.jpeg";
+import gripper from "/assets/Gripper img.jpg";
+import plc from "/assets/plc application.jpg";
+import software from "/assets/software.jpg";
+import school from "/assets/school.jpg";
 
 function ProductList() {
   const [animateHeading, setAnimateHeading] = useState(false);

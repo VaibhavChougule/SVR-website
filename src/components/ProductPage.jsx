@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import bg from "../assets/bg.jpg";
+import bg from "/assets/bg.jpg";
 import { Link } from "react-router-dom";
 
 const ProductPage = () => {

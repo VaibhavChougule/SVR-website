@@ -41,17 +41,17 @@ const Events = () => {
       title: "AICTE Training",
       description:
         "Khushaldas Badhan delivered a session on 'Applications of Robotics in Nuclear, Defence, Security & Space Science Fields.'",
-      images: ["../src/assets/AICTETRAINING.png"],
+      images: ["/assets/AICTETRAINING.png"],
     },
     {
       title: "NAFED 2019",
       description: "Nafed 2019 Developer's & User's Meet, Mumbai.",
       images: [
-        "../src/assets/nafed 2019 (1).jpeg",
-        "../src/assets/nafed 2019 (2).jpeg",
-        "../src/assets/nafed 2019 (3).jpeg",
-        "../src/assets/nafed 2019 (4).jpeg",
-        "../src/assets/nafed 2019 (5).jpeg",
+        "/assets/nafed 2019 (1).jpeg",
+        "/assets/nafed 2019 (2).jpeg",
+        "/assets/nafed 2019 (3).jpeg",
+        "/assets/nafed 2019 (4).jpeg",
+        "/assets/nafed 2019 (5).jpeg",
       ],
     },
     {
@@ -59,11 +59,11 @@ const Events = () => {
       description:
         "Nafed 2018 Developer's & User's Meet at Panimalar College, Chennai.",
       images: [
-        "../src/assets/nafed_1 2018.jpg",
-        "../src/assets/nafed_2 2018.jpg",
-        "../src/assets/nafed_4 2018.jpg",
-        "../src/assets/nafed_3 2018.jpg",
-        "../src/assets/nafed_5 2018.jpg",
+        "/assets/nafed_1 2018.jpg",
+        "/assets/nafed_2 2018.jpg",
+        "/assets/nafed_4 2018.jpg",
+        "/assets/nafed_3 2018.jpg",
+        "/assets/nafed_5 2018.jpg",
       ],
     },
     {
@@ -71,12 +71,12 @@ const Events = () => {
       description:
         "SVR Robotics conducted a two-day workshop focusing on basics of robotics, real-time applications, and hands-on experience for students.",
       images: [
-        "../src/assets/img- (1)jj.jpg",
-        "../src/assets/img- (2)jj.jpg",
-        "../src/assets/img- (3)jj.jpg",
-        "../src/assets/img- (4)jj.jpg",
-        "../src/assets/img- (5)jj.jpg",
-        "../src/assets/img- (6)jj.jpg",
+        "/assets/img- (1)jj.jpg",
+        "/assets/img- (2)jj.jpg",
+        "/assets/img- (3)jj.jpg",
+        "/assets/img- (4)jj.jpg",
+        "/assets/img- (5)jj.jpg",
+        "/assets/img- (6)jj.jpg",
       ],
     },
     {
@@ -84,12 +84,12 @@ const Events = () => {
         "Jorhat Institute of Science and Technology Robotics Workshop",
       description:
         "SVR Robotics conducted a two-day workshop in collaboration with CDAC Kolkata, focusing on basics of robotics and real-time applications.",
-      images: ["../src/assets/img-1 jorhat.jpg"],
+      images: ["/assets/img-1 jorhat.jpg"],
     },
     {
       title: "ROC",
       description: "Photos from the ROC event.",
-      images: ["../src/assets/ROC1.jpg", "../src/assets/ROC2.jpg", "../src/assets/ROC3.jpg"],
+      images: ["/assets/ROC1.jpg", "/assets/ROC2.jpg", "/assets/ROC3.jpg"],
     },
   ];
 

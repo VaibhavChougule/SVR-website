@@ -1,14 +1,14 @@
 import React from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import image from '../assets/AI robot.jpg';
+import image from '/assets/AI robot.jpg';
 import Footer from "./Footer.jsx";
 import Header from "./Header.jsx";
 
 const ProductInformation = {
   roboticslab: {
     title: "Robotics Lab Setup",
-    image: ["../src/assets/setup_my_lab_1.jpg", "../src/assets/setup_my_lab_2.jpg", "path3"],
+    image: ["/assets/setup_my_lab_1.jpg", "/assets/setup_my_lab_2.jpg", "path3"],
     description: "Complete Product description",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
@@ -34,12 +34,12 @@ const ProductInformation = {
   },
   scararobot: {
     title: "Scara Robot",
-    image: ['../src/assets/AI robot.jpg', image, image],
+    image: ['/assets/AI robot.jpg', image, image],
     description: "Highly rigid arms and cutting-edge servo controls. Ideal for a wide range of fields, from high-volume production of foodstuffs and pharmaceuticals demanding fast operation to assembly work requiring high levels of precision.",
     features: ["High speed & high performance for the application in single planer.",
        "Integrating with multiple grippers with a robot to optimize operations",
       "Robot safety standard has been followed during installation like MCB, Stabilizer, SPD, PLC, standard wiring, etc. at SVR"],
-    // blueprintImages: ['../src/assets/AI robot.jpg', '../src/assets/AI robot.jpg'],
+    // blueprintImages: ['/assets/AI robot.jpg', '/assets/AI robot.jpg'],
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -49,7 +49,7 @@ const ProductInformation = {
   },
   cobot: {
     title: "Cobot",
-    image: ["path1", "../src/assets/cobotsvr.jpeg", "path3"],
+    image: ["path1", "/assets/cobotsvr.jpeg", "path3"],
     description: "SVR Robotics excels in developing collaborative robots (COBOTs) that seamlessly integrate with human workers, enhancing productivity and safety. Our advanced COBOT solutions are designed to optimize workflows and adapt to various industrial applications.",
     features: ["Mitsubishi Electric Collaborative Robot - MELFAASSISTA can share a workspace with humans. Simpler, easier and more flexible.",
       "Touch screen control panel which has LED on the robot arm to display the status of the robot",
@@ -108,7 +108,7 @@ const ProductInformation = {
   },
   fms: {
     title: "Flexible Manufacturing System",
-    image: ["path1", "../src/assets/fms.jpg", "path3"],
+    image: ["path1", "/assets/fms.jpg", "path3"],
     description: "A Flexible Manufacturing System / Modular Manufacturing System offers a complete production process of material feeding, integrated manufacturing like drilling, inspection, sorting based on drilling and depth inspection, cartesian robotic configuration, sorting based on metal / non-metal& colour. FMS is ideally developed to teach PLC programming, visualization, commissioning and troubleshooting of automated industrial Mechatronics systems to students.SVR FMS offers a safe environment for students to explore modern Industrial Automation. Students learn to visualize the real-time working of the various gripping by suction cup, pneumatic gripper, magnetic Gripper, etc, integration of Conveyor with PLC, rotary table with various application like drilling & inspection, pneumatic actuator, solenoid valve, PLC, VFD, AC Induction Motor, HMI, Vacuum Ejector, Compressor, Sensor, and the other components used.",
     features: ["AI-based modular manufacturing system controlled by a single Siemens PLC.",
       "Modular design allows operation of all eight stations simultaneously or one by one, with the ability to add or remove stations.",
@@ -147,7 +147,7 @@ const ProductInformation = {
   },
   electropneumatic: {
     title: "IoT, PLC, Manual Based Electro-Pneumatic System",
-    image: ["path1", "../src/assets/pneumatic.jpg", "path3"],
+    image: ["path1", "/assets/pneumatic.jpg", "path3"],
     description: "An Electro-Pneumatic System with manual, PLC-based, and IoT-based operations. Experiments include direct cylinder actuation, use of 5/3 valve as a memory valve, two-cylinder coordinated motion control, sequential motion control, and pressure circuits. Components are mounted on an industrial-grade panel for rigidity, featuring parts from Festo and Genetic.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
@@ -214,7 +214,7 @@ const ProductInformation = {
   },
   sensorizedgripper: {
     title: "Sensorized Gripper",
-    image: ["path1", "../src/assets/SensorisedGripper.jpg", "path3"],
+    image: ["path1", "/assets/SensorisedGripper.jpg", "path3"],
     description: "product description",
     features: ["Payload -2kg, Actuation-Electrical",
       "Sensors integrated- Infrared sensor, Strain gauge, Load cell, Flexi-force sensor.",
@@ -229,7 +229,7 @@ const ProductInformation = {
   },
   magneticgripper: {
     title: "Magnetic Gripper",
-    image: ["path1", "../src/assets/magneticgripper.jpg", "path3"],
+    image: ["path1", "/assets/magneticgripper.jpg", "path3"],
     description: "product description",
     features: [
       "Pneumatically Operated Gripper",
@@ -249,7 +249,7 @@ const ProductInformation = {
   },
   gripperlab: {
     title: "Gripper Lab",
-    image: ["path1", "../src/assets/gripperlab img.png", "path3"],
+    image: ["path1", "/assets/gripperlab img.png", "path3"],
     description: "product description",
     features: [
       "True translational motion",
@@ -272,7 +272,7 @@ const ProductInformation = {
   },
   graboparallel: {
     title: "Svr Grabo 1.2 & 5 (Parallel Jaw) ",
-    image: ["../src/assets/Parallel Grabo 5.png", "../src/assets/SVR Garbo 1.2,5 gripper.jpeg", "../src/assets/parallel_1.2.png"],
+    image: ["/assets/Parallel Grabo 5.png", "/assets/SVR Garbo 1.2,5 gripper.jpeg", "/assets/parallel_1.2.png"],
     description: "The Svr Grabo 1.2 & 5 (Parallel Jaw) is a high-performance robotic gripper designed for precision and versatility. Built with high-quality materials, this gripper is equipped with a servo motor for enhanced accuracy and quick response, making it ideal for a wide range of applications. It features a payload capacity of 5 kg, with additional options available for 1.2 kg and 10 kg payloads to suit specific requirements. The parallel and curvilinear gripper jaws are easily detachable, ensuring quick adaptability to various tasks. Utilizing spur gears for better drive, the gripper requires no lubrication, reducing maintenance needs. Its mountable design and optional overhead camera integration further enhance its functionality. With Ethernet/IP, CANopen, and EtherCAT connectivity, and customizable feedback options for force and position sensing, it offers seamless integration into existing systems. The gripper is capable of 60 cycles per minute with a maximum stroke of 70 mm and a gripping force of 180 N, making it highly efficient for demanding operations. Designed to operate in temperatures ranging from 0°C to 40°C, it is also customizable for specific environmental conditions. Compact and lightweight at 3.3 kg, the Svr Grabo is the perfect combination of precision, reliability, and cost-effectiveness.",
     features: [
       "Servo motor robotic gripper",
@@ -305,7 +305,7 @@ const ProductInformation = {
   },
   grabocurvilinear: {
     title: "Svr Grabo 1.2 & 5 (Curvilinear Jaw)",
-    image: ["../src/assets/curv_1.2.png", "../src/assets/SVR Garbo ( Curvilinear Jaw).jpeg", "../src/assets/Curvilinear Grabo.png"],
+    image: ["/assets/curv_1.2.png", "/assets/SVR Garbo ( Curvilinear Jaw).jpeg", "/assets/Curvilinear Grabo.png"],
     description: "product description",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
@@ -331,7 +331,7 @@ const ProductInformation = {
   },
   vfdkit: {
     title: "VFD Kit",
-    image: ["path1", "../src/assets/VFD KIT.jpg", "path3"],
+    image: ["path1", "/assets/VFD KIT.jpg", "path3"],
     description: "The VFD kit controls motor speed and direction with additional features like running the motor on time and controlling it in auto or manual modes.",
     features: ["Siemens 0.25 Hp 3-phase AC induction motor",
        "Siemens/Mitsubishi VFD",
@@ -353,7 +353,7 @@ const ProductInformation = {
   },
   elevatorsimulationkit: {
     title: "Elevator Simulation Kit",
-    image: ["path1", "../src/assets/Elevator simulation.png", "path3"],
+    image: ["path1", "/assets/Elevator simulation.png", "path3"],
     description: "A realistic elevator demonstration model with PLC integration for automation and monitoring. It includes motor control study for smooth acceleration and deceleration, load handling, and variable speed operations. The interactive control panel enhances the understanding of elevator mechanics and controls.A 3-floor elevator simulation with a stepper motor-driven cabin, proximity sensor for position detection, and MS frame for housing the setup.",
     features: ["3-floor, 750mm tall elevator setup", 
       "Stepper motor-driven elevator cabin with balance weight",
@@ -373,7 +373,7 @@ const ProductInformation = {
   },
   steppermotorcontrolkit: {
     title: "Stepper Motor Speed and Direction Control Kit",
-    image: ["path1", "../src/assets/Stepper Motor Speed & Direction Control.jpg", "path3"],
+    image: ["path1", "/assets/Stepper Motor Speed & Direction Control.jpg", "path3"],
     description: "This system controls the speed and direction of a stepper motor, with time-based control and position detection.",
     features: ["Nema 17, 45KgCm geared stepper motor with digital microstepping driver", 
       "Motor speed increase/decrease functionality",
@@ -393,7 +393,7 @@ const ProductInformation = {
   },
   waterlevelcontrolkit: {
     title: "Water Level Control Kit",
-    image: ["path1", "../src/assets/waterlevelcontrolkit.png", "path3"],
+    image: ["path1", "/assets/waterlevelcontrolkit.png", "path3"],
     description: "Water level control kit with float sensors for detecting water levels, a 12V DC water pump, and an acrylic control board.",
     features: ["Stainless steel lower and upper 3-litre water tanks", 
       "Two float sensors with three level indication",
@@ -411,7 +411,7 @@ const ProductInformation = {
   },
   conveyorkit: {
     title: "Conveyor Kit",
-    image: ["path1", "../src/assets/Conveyorkitweb.png", "path3"],
+    image: ["path1", "/assets/Conveyorkitweb.png", "path3"],
     description: "A stepper-driven belt conveyor system with speed and direction control, housed in a powder-coated MS frame with an acrylic control board.",
     features: ["300mm*50mm stepper-driven belt conveyor", 
       "Nema 17, 45KgCm geared stepper motor with digital microstepping driver",
@@ -431,7 +431,7 @@ const ProductInformation = {
   },
   stardeltakit: {
     title: "Star Delta Kit",
-    image: ["path1", "../src/assets/stardeltastarter.png", "path3"],
+    image: ["path1", "/assets/stardeltastarter.png", "path3"],
     description: "A star-delta starter with functionality to switch between star and delta connections on a time basis, and MS powder-coated frame with an acrylic control board.",
     features: ["Siemens air break contactor for actual demonstration", 
       "Functionality to operate star/delta connection",
@@ -448,7 +448,7 @@ const ProductInformation = {
   },
   temperaturecontrolkit: {
     title: "Temperature Control Kit",
-    image: ["path1", "../src/assets/temperaturecontrolkit.png", "path3"],
+    image: ["path1", "/assets/temperaturecontrolkit.png", "path3"],
     description: "A temperature control kit with a 3-litre water tank, float sensor, and 1000W AC water heater, all housed in a powder-coated MS frame with an acrylic control board.",
     features: ["Stainless steel 3-litre water tank", 
       "Float sensor with three-level indication",
@@ -479,7 +479,7 @@ const ProductInformation = {
   },
   linefollowingrobot: {
     title: "Line Following Robot ",
-    image: ["path1", "../src/assets/line follower.JPG", "path3"],
+    image: ["path1", "/assets/line follower.JPG", "path3"],
     description: "Line Follower Robot uses Arduino Nano development board. The robot finds the path in the Line and follow the same. The system uses Infrared sensor to find the path and ultrasound sensor for obstacle detection which is controlled by C programmed microcontroller and the same drives the geared DC motor. The user will get thorough knowledge about functioning and interfacing of an IR sensor, a DC motor & an ultrasound sensor. This project will also help the user in developing programming logic using if-else function. This very simple and easy to build kit is perfect for beginners and is a great learning platform to get into robotics and engineering.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
@@ -498,7 +498,7 @@ const ProductInformation = {
   },
   selfbalancingrobot: {
     title: "Self-balancing Robot",
-    image: ["../src/assets/selfbalancebot.png", "../src/assets/self balancing.JPG", "path3"],
+    image: ["/assets/selfbalancebot.png", "/assets/self balancing.JPG", "path3"],
     description: "Two wheeled self-balancing robot, which is based on an inverted pendulum system, is dynamically stable but statically unstable. The robot involves various physics and control theories. This project describes the modeling of the two wheeled self-balancing robot, designs the robot controller using PID and implements the controller on the robot. In this project, an inertial measurement unit (IMU) is used, which combines accelerometer and gyroscope measurement in order to estimate and obtain the tilt angle of the robot. The PID controller is applied to correct the error between the desired set point and the actual tilt angle and adjust the dc motor speed accordingly to balance the robot. The result obtained shows that the PID controller is able to balance the robot acceptably but with some limitations. The simulation result of the model is compared with the developed hardware and the performance of the controller is analyzed and discussed.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
@@ -513,7 +513,7 @@ const ProductInformation = {
   },
   digitaldicekit: {
     title: "Digital Dice Kit",
-    image: ["../src/assets/digitaldice.png", "../src/assets/Digital Dice.jpg", "path3"],
+    image: ["/assets/digitaldice.png", "/assets/Digital Dice.jpg", "path3"],
     description: "An electronic kit that simulates the rolling of dice, typically using LEDs and a random number generator.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
@@ -532,7 +532,7 @@ const ProductInformation = {
   },
   temperaturecontrolledfankit: {
     title: "Temperature Controlled Fan Kit",
-    image: ["../src/assets/temperaturefankit.png", "../src/assets/Temperature Controlled Fan Kit.JPG", "path3"],
+    image: ["/assets/temperaturefankit.png", "/assets/Temperature Controlled Fan Kit.JPG", "path3"],
     description: "This application is simple just by using temperature sensor LM35 with an Arduino kit to control a fan with respect to the temperature read by the micro-controller which in this case is the Arduino kit. The temperature sensor LM35 is connected with the Arduino with an analog input pin A0 (the temperature is an analog signal), while the fan is connected with a PWM (Pulse Width Modulation) pin 6 which controls the speed of the fan with respect to the output temperature using a function map in the Arduino IDE.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
@@ -552,7 +552,7 @@ const ProductInformation = {
   },
   objectcounter: {
     title: "Object Counter Kit",
-    image: ["path1", "../src/assets/object counter.png", "path3"],
+    image: ["path1", "/assets/object counter.png", "path3"],
     description: "Object counters or product counters are important applications used in industries, shopping malls, etc. They count objects or products automatically and so reduce human efforts.",
     features: ["High Quality Stainless Steel Chassis",
               "High Precision & reliable electronic devices",
@@ -584,7 +584,7 @@ const ProductInformation = {
   },
   roboanalyzer: {
     title: "RoboAnalyzer",
-    image: ["path1", "../src/assets/robo soft.jpg", "path3"],
+    image: ["path1", "/assets/robo soft.jpg", "path3"],
     description: ["Robotics is a subject that deals with the design, analysis, fabrication, and usage of robots for various automated and semi-automated tasks. ",
         "The concepts taught in a typical robotics course are generally difficult to perceive just by looking at textbook figures. Hence, a need for simulation software for teaching and learning robotics is of prime importance.",
         " RoboAnalyzer® is a 3D model-based software that can be used to teach and learn robotics concepts. It is an evolving product developed in Mechatronics Lab, Department of Mechanical Engineering at IIT Delhi, New Delhi, India.",
@@ -613,7 +613,7 @@ const ProductInformation = {
   },
   mechanalyzer: {
     title: "MechAnalyzer",
-    image: ["path1", "../src/assets/mach1 soft.jpg", "path3"],
+    image: ["path1", "/assets/mach1 soft.jpg", "path3"],
     description: "A 3D model-based software developed for effective teaching and learning of mechanisms. It allows simulation and analysis of preloaded mechanisms to reduce setup time.",
     features: [
       "Simulation of around 10 mechanisms",
@@ -631,7 +631,7 @@ const ProductInformation = {
   },
   feast: {
     title: "FEAST",
-    image: ["path1", "../src/assets/feast Img.png", "path3"],
+    image: ["path1", "/assets/feast Img.png", "path3"],
     description: "FEAST (Finite Element Analysis of STructures) is a structural analysis software based on Finite Element Method. FEAST is ISRO’s structural analysis software based on finite element method realized by Structural Engineering Entity of Vikram Sarabhai Space Centre (VSSC)/Indian Space Research Organisation (ISRO).The software was primarily developed for solving ISRO’s launch vehicle and satellite structural engineering problems.",
     features: [
     "Linear Static Analysis",
