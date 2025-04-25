@@ -43,13 +43,13 @@ const Support = () => {
     // image: null,
   });
 
-  const [visibleForm, setVisibleForm] = useState(null);
-  const [isChatboxOpen, setIsChatboxOpen] = useState(true);
+  const [visibleForm, setVisibleForm] = useState(null); 
+  // const [isChatboxOpen, setIsChatboxOpen] = useState(true);
   const [modal, setModal] = useState(false)
 
-  const handleChatboxClose = () => {
-    setIsChatboxOpen(false);
-  };
+  // const handleChatboxClose = () => {
+  //   setIsChatboxOpen(false);
+  // };
 
   const handleChange = (e, formType) => {
     const { name, value } = e.target;
@@ -130,7 +130,7 @@ const Support = () => {
       })
       .then((data) => {
         console.log("response:", data);
-        if(data.success === false){
+        if (data.success === false) {
           setModal(false)
           alert(data.message);
           return;
@@ -411,15 +411,17 @@ const Support = () => {
       </div>
 
       {/* Chatbox Component */}
-      {isChatboxOpen && (
+      {/* {isChatboxOpen && (
         <div className="fixed bottom-6 right-6 z-50 w-auto">
           <Chatbox onClose={handleChatboxClose} />
         </div>
-      )}
+      )} */}
 
       {modal && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-4" onClick={() => setLoading(false)}>
-          {/* <img src={modalImage} alt="Large Preview" className="max-w-full max-h-full rounded shadow-lg" /> */}
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-4 z-50"
+          onClick={() => setLoading(false)}
+        >
           <h1>Loading..</h1>
         </div>
       )}

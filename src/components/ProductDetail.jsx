@@ -23,7 +23,7 @@ function ProductDetails() {
   //   return <div>No product details available</div>;
   // }
 
-  const robot = [
+  const robot  = [
     {
       "title": "Articulated Robot",
       "image": "/assets/Articulatedpro.jpeg",
@@ -39,17 +39,19 @@ function ProductDetails() {
     {
       "title": "Cobot",
       "image": "/assets/cobotsvr.jpeg",
-      "description": "SVR Robotics excels in developing collaborative robots (COBOTs) that seamlessly integrate with human workers, enhancing productivity and safety. Our advanced COBOT solutions are designed to optimize workflows and adapt to various industrial applications.",
-      "specifications": {
-        "controller": "CR80005VD",
-        "joints": 6,
-        "speed": "1000mm/s",
-        "motors": "AC Servo Motor",
-        "reach": "910mm",
-        "payload": "5kg",
-        "additional_features": "Touch screen control panel with LED display on the robot arm indicating the status."
-      }
-    },
+      "description": "SVR Robotics' Collaborative Robots (Cobots) are designed to enhance productivity, efficiency, and safety in industrial and commercial settings. Our cobots work seamlessly alongside human operators, offering precision, flexibility, and ease of integration into existing workflows. Payload from 3 kg to 20 Kg.",
+      "features": [
+        "Intelligent Human-Robot Collaboration",
+        "Advanced Safety Mechanisms & Collision Detection",
+        "Easy Programming & Quick Deployment",
+        "High Precision & Adaptability",
+        "Cost-Effective Automation"
+      ],
+      "postFeaturesDescription": "From manufacturing and assembly lines to kitchen automation and service industries, our cobots redefine automation, making complex tasks simpler and more efficient.",
+      "callToAction": "Upgrade to Smart Robotics Today! Contact us to explore how our cobots can revolutionize your operations."
+    }
+    ,
+
     {
       "title": "Scara Robot",
       "image": "/assets/Scara img.jpeg",
@@ -216,23 +218,29 @@ function ProductDetails() {
   const svrinnovation = [
     {
       "title": "IOT, PLC, Manual Based Electro-Hydraulic System",
-      "image": "/assets/hydrolic.jpg",
+      "image": "/assets/hydraulic2.png",
       "description": "An Electro-Hydraulic System designed for experiments like single/double-acting cylinder, regenerative circuit, pump unloading circuit, cylinder sequencing/reciprocating circuit, cylinder locking circuit, and cylinder synchronization. The system supports manual, PLC-based, and IoT-based operations. It includes components from Festo, Genetic, and Bash."
     },
     {
       "title": "IOT, PLC, Manual Based Electro-Pneumatic System",
-      "image": "/assets/pneumatic.jpg",
+      "image": "/assets/pneumatic2.png",
       "description": "An Electro-Pneumatic System with manual, PLC-based, and IoT-based operations. Experiments include direct cylinder actuation, use of 5/3 valve as a memory valve, two-cylinder coordinated motion control, sequential motion control, and pressure circuits. Components are mounted on an industrial-grade panel for rigidity, featuring parts from Festo and Genetic."
     },
     {
       "title": "Elevator Kit",
-      "image": "/assets/Elevator simulation.png",
+      "image": "/assets/elevator1.png",
       "description": "A realistic elevator demonstration model with PLC integration for automation and monitoring. It includes motor control study for smooth acceleration and deceleration, load handling, and variable speed operations. The interactive control panel enhances the understanding of elevator mechanics and controls."
     },
     {
       "title": "Bottle Filling Plant",
       "image": "/assets/bottle filling.png",
       "description": "An IoT-enabled bottle filling plant with SCADA integration for water usage monitoring, PLC-based controllers for precise operation, and scalable production. Features include a user-friendly interface, quality control mechanisms, energy-efficient components, and robust construction for industrial environments."
+    },
+    {
+     "title": "Stewart",
+     "image": "/assets/stewart1.png",
+     "description": "At SVR, our Stewart platform, known as a hexapod, is a type of parallel manipulator composed of six actuators connected to a fixed base and a movable platform. It is designed to provide precise control of the platform's position and orientation in three-dimensional space. Each actuator in the Stewart platform adjusts the length of its corresponding leg, allowing the platform to perform complex movements like translation and rotation."
+  
     }
   ]
 
@@ -264,8 +272,8 @@ function ProductDetails() {
       "description": "A DIY kit that automatically adjusts a fan's speed based on the surrounding temperature using sensors and control circuitry."
     },
     {
-      "title": "Knight 4.0, 8.0, 10.0",
-      "image": "/assets/IMG 01 (2).jpg",
+      "title": "Bipedal 4.0 DoF, 8.0 DoF, 10.0 DoF",
+      "image": "/assets/bipedal1.png",
       "description": "Robots having 4, 8, and 10 degrees of freedom (DOF) designed to walk, balance, and navigate terrain using bipedal locomotion."
     }
   ]
@@ -335,7 +343,7 @@ function ProductDetails() {
             "Cartesian Configuration",
             "Integration with Robot for various applications"
           ]
-        },
+        }
         // "Modular design allows operation of all eight stations simultaneously or one by one, with the ability to add or remove stations.",
         // "Integration with Siemens, Mitsubishi, Allen-Bradley, and Delta PLCs.",
         // "HMI-enabled for visualization and easy operations.",
@@ -347,15 +355,65 @@ function ProductDetails() {
         // "24V DC 5/2 solenoid valves for air control.",
         // "Silent air compressor for air supply.",
         // "Can be integrated with any industrial-grade robot."
+        ]
+    }
+  ]
+
+  const educationLab = [
+    {
+      "title": "Education Lab",
+      "image": "/assets/lab1.jpg",
+      "description": "A well-equipped Education lab designed to help students conduct various experiments.",
+      "features": [
+        // "Comprehensive set of physics experiment tools",
+        // "Optical and mechanical apparatus",
+        // "Digital measuring instruments",
+        // "Supports high school and college-level experiments",
+        // "Interactive learning experience"
+      ]
+    },
+    {
+      "title": "Education Lab",
+      "image": "/assets/lab2.jpg",
+      "description": "A well-equipped Education lab designed to help students conduct various experiments.",
+      "features": [
+        // "Hands-on circuit design and troubleshooting",
+        // "Microcontroller programming and integration",
+        // "Digital and analog electronics components",
+        // "Supports Arduino and Raspberry Pi-based projects",
+        // "Ideal for school and college students interested in electronics"
       ]
     }
   ]
 
+  // const Instrumentationlab = [
+  //   {
+  //     "title": "Physics Experiment Lab",
+  //     "image": "/assets/physics_lab.jpg",
+  //     "description": "A well-equipped physics lab designed to help students conduct experiments on mechanics, optics, and electromagnetism.",
+  //     "features": [
+  //       "Comprehensive set of physics experiment tools",
+  //       "Optical and mechanical apparatus",
+  //       "Digital measuring instruments",
+  //       "Supports high school and college-level experiments",
+  //       "Interactive learning experience"
+  //     ]
+  //   },
+  //   {
+  //     "title": "Electronics & Circuit Lab",
+  //     "image": "/assets/electronics_lab.jpg",
+  //     "description": "An advanced electronics lab designed for students to learn about circuits, microcontrollers, and embedded systems.",
+  //     "features": [
+  //       "Hands-on circuit design and troubleshooting",
+  //       "Microcontroller programming and integration",
+  //       "Digital and analog electronics components",
+  //       "Supports Arduino and Raspberry Pi-based projects",
+  //       "Ideal for school and college students interested in electronics"
+  //     ]
+  //   }
+  // ];
 
-
-
-
-  if (type === "robot") {
+  if (type === "robots for various applications") {
 
 
 
@@ -365,51 +423,55 @@ function ProductDetails() {
         <div className="h-72 w-full bg-gradient-to-r from-blue-600 to-indigo-800 bg-cover bg-center flex justify-center items-center text-white font-serif relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="relative z-10 text-center">
-            <h1 className="text-6xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}_</h1>
+            <h1 className="text-6xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}</h1>
             <i className="fa-regular fa-circle-down text-4xl animate-bounce"></i>
           </div>
         </div>
 
         {robot.map((data, index) => (
-          <div key={index} className="flex justify-evenly w-full h-1/3 p-2 border-2 border-slate-800 rounded-lg mb-6">
-            <div className="flex justify-evenly flex-col md:flex-row bg-slate-300 rounded-md w-full">
-              {/* Left side: Image */}
-              <div className="md:w-1/3">
-                <img
-                  src={data.image}
-                  alt="Product"
-                  className="h-full w-full object-fill p-2 rounded-2xl"
-                />
-              </div>
+        <div key={index} className="flex justify-evenly w-full h-1/3 p-2 border-2 border-slate-800 rounded-lg mb-6">
+          <div className="flex justify-evenly flex-col md:flex-row bg-slate-300 rounded-md w-full">
+            
+            {/* Left side: Image */}
+            <div className="md:w-1/3">
+              <img
+                src={data.image}
+                alt="Product"
+                className="h-full w-full object-fill p-2 rounded-2xl"
+              />
+            </div>
 
-              {/* Right side: Content */}
-              <div className="md:w-2/3 p-6 flex flex-col justify-center">
-                <h1 className="text-3xl font-bold mb-4 font-serif text-orange-600">{data.title}</h1>
-                <p className="text-lg mb-6 text-left">{data.description}</p>
+            {/* Right side: Content */}
+            <div className="md:w-2/3 p-6 flex flex-col justify-center">
+              <h1 className="text-3xl font-bold mb-4 font-serif text-orange-600">{data.title}</h1>
+              <p className="text-lg mb-6 text-left">{data.description}</p>
 
-                {/* Display Features */}
-                {data.features && (
-                  <ul className="list-disc pl-6 text-lg">
-                    {data.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                )}
+              {/* Display Features */}
+              {data.features && (
+                <ul className="list-disc pl-6 text-lg">
+                  {data.features.map((feature, featureIndex) => (
+                    <li key={featureIndex}>{feature}</li>
+                  ))}
+                </ul>
+              )}
 
-                {/* Display Specifications if available */}
-                {data.specifications && (
-                  <ul className="list-disc pl-6 text-lg">
-                    {Object.entries(data.specifications).map(([key, value], index) => (
-                      <li key={index}>
-                        <strong>{key.charAt(0).toUpperCase() + key.slice(1)}:</strong> {value}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+              {/* 🔥 NEW: Display Post Features Description if Available */}
+              {/* 🔥 NEW: Display Post Features Description if Available */}
+              {data.postFeaturesDescription && (
+                <h3 className="text-lg mt-4 font-normal">{data.postFeaturesDescription}</h3>
+              )}
+
+              {/* 🔥 NEW: Display Call To Action if Available */}
+              {data.callToAction && (
+                <h3 className="text-lg mt-4 font-normal">{data.callToAction}</h3>
+              )}
+
+
             </div>
           </div>
-        ))}
+        </div>
+      ))}
+
         <Footer />
       </>
     );
@@ -426,7 +488,7 @@ function ProductDetails() {
         <div className="h-72 w-full bg-gradient-to-r from-blue-600 to-indigo-800 bg-cover bg-center flex justify-center items-center text-white font-serif relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="relative z-10 text-center">
-            <h1 className="text-6xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}_</h1>
+            <h1 className="text-6xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}</h1>
             <i className="fa-regular fa-circle-down text-4xl animate-bounce"></i>
           </div>
         </div>
@@ -482,7 +544,7 @@ function ProductDetails() {
         <div className="h-72 w-full bg-gradient-to-r from-blue-600 to-indigo-800 bg-cover bg-center flex justify-center items-center text-white font-serif relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="relative z-10 text-center">
-            <h1 className="text-6xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}_</h1>
+            <h1 className="text-6xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}</h1>
             <i className="fa-regular fa-circle-down text-4xl animate-bounce"></i>
           </div>
         </div>
@@ -540,7 +602,7 @@ function ProductDetails() {
         <div className="h-72 w-full bg-gradient-to-r from-blue-600 to-indigo-800 bg-cover bg-center flex justify-center items-center text-white font-serif relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="relative z-10 text-center">
-            <h1 className="text-3xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}_</h1>
+            <h1 className="text-3xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}</h1>
             <i className="fa-regular fa-circle-down text-4xl animate-bounce"></i>
           </div>
         </div>
@@ -598,7 +660,7 @@ function ProductDetails() {
         <div className="h-72 w-full bg-gradient-to-r from-blue-600 to-indigo-800 bg-cover bg-center flex justify-center items-center text-white font-serif relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="relative z-10 text-center">
-            <h1 className="text-3xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}_</h1>
+            <h1 className="text-3xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}</h1>
             <i className="fa-regular fa-circle-down text-4xl animate-bounce"></i>
           </div>
         </div>
@@ -656,7 +718,7 @@ function ProductDetails() {
         <div className="h-72 w-full bg-gradient-to-r from-blue-600 to-indigo-800 bg-cover bg-center flex justify-center items-center text-white font-serif relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="relative z-10 text-center">
-            <h1 className="text-4xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}_</h1>
+            <h1 className="text-4xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}</h1>
             <i className="fa-regular fa-circle-down text-4xl animate-bounce"></i>
           </div>
         </div>
@@ -714,7 +776,7 @@ function ProductDetails() {
         <div className="h-72 w-full bg-gradient-to-r from-blue-600 to-indigo-800 bg-cover bg-center flex justify-center items-center text-white font-serif relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="relative z-10 text-center">
-            <h1 className="text-6xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}_</h1>
+            <h1 className="text-6xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}</h1>
             <i className="fa-regular fa-circle-down text-4xl animate-bounce"></i>
           </div>
         </div>
@@ -769,6 +831,82 @@ function ProductDetails() {
       </>
     );
   }
+
+
+  else if (type === "educationLab") {
+
+    return (
+      <>
+        <Header />
+        <div className="h-72 w-full bg-gradient-to-r from-blue-600 to-indigo-800 bg-cover bg-center flex justify-center items-center text-white font-serif relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-40"></div>
+          <div className="relative z-10 text-center">
+            <h1 className="text-6xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}</h1>
+            <i className="fa-regular fa-circle-down text-4xl animate-bounce"></i>
+          </div>
+        </div>
+        {educationLab.map((data, index) => (
+          <div key={index} className="flex justify-evenly w-full h-1/3 p-2 border-2 border-slate-800 rounded-lg mb-6">
+            <div className='flex justify-evenly flex-col md:flex-row bg-slate-300 rounded-md w-full'>
+              <div className="md:w-1/3">
+                <img src={data.image} alt="Product" className="w-full h-full object-cover p-2 rounded-2xl" />
+              </div>
+              <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                <h1 className="text-3xl font-bold mb-4 font-serif text-orange-600">{data.title}</h1>
+                <p className="text-lg mb-6 text-left">{data.description}</p>
+                {data.features && (
+                  <ul className="list-disc pl-6 text-lg">
+                    {data.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+        <Footer />
+      </>
+    );
+  }
+
+  // else if (type === "Instrumentationlab") {
+
+  //   return (
+  //     <>
+  //       <Header />
+  //       <div className="h-72 w-full bg-gradient-to-r from-blue-600 to-indigo-800 bg-cover bg-center flex justify-center items-center text-white font-serif relative overflow-hidden">
+  //         <div className="absolute inset-0 bg-black opacity-40"></div>
+  //         <div className="relative z-10 text-center">
+  //           <h1 className="text-6xl font-bold mb-4 text-shadow-lg">{type.toUpperCase()}</h1>
+  //           <i className="fa-regular fa-circle-down text-4xl animate-bounce"></i>
+  //         </div>
+  //       </div>
+  //       {Instrumentationlab.map((data, index) => (
+  //         <div key={index} className="flex justify-evenly w-full h-1/3 p-2 border-2 border-slate-800 rounded-lg mb-6">
+  //           <div className='flex justify-evenly flex-col md:flex-row bg-slate-300 rounded-md w-full'>
+  //             <div className="md:w-1/3">
+  //               <img src={data.image} alt="Product" className="w-full h-full object-cover p-2 rounded-2xl" />
+  //             </div>
+  //             <div className="md:w-2/3 p-6 flex flex-col justify-center">
+  //               <h1 className="text-3xl font-bold mb-4 font-serif text-orange-600">{data.title}</h1>
+  //               <p className="text-lg mb-6 text-left">{data.description}</p>
+  //               {data.features && (
+  //                 <ul className="list-disc pl-6 text-lg">
+  //                   {data.features.map((feature, index) => (
+  //                     <li key={index}>{feature}</li>
+  //                   ))}
+  //                 </ul>
+  //               )}
+  //             </div>
+  //           </div>
+  //         </div>
+  //       ))}
+  //       <Footer />
+  //     </>
+  //   );
+  // }
+
 }
 
 export default ProductDetails;

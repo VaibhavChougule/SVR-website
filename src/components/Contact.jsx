@@ -84,7 +84,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-lg font-semibold">Email:</p>
-                  <p className="text-base">krunali@svrrobotics.com</p>
+                  <p className="text-base">support@svrrobotics.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">

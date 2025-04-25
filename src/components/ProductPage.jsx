@@ -19,9 +19,7 @@ const ProductPage = () => {
     {
       title: "FMS",
       link: "fms",
-      items: [
-        ["Flexible Manufacturing System", "fms"],
-      ],
+      items: [["Flexible Manufacturing System", "fms"]],
     },
     {
       title: "SVR Innovation",
@@ -31,6 +29,7 @@ const ProductPage = () => {
         ["IoT, PLC, Manual Based Electro-Pneumatic System", "electropneumatic"],
         ["Elevator Kit", "elevatorsimulationkit"],
         ["Bottle Filling Plant", "bottlefillingplant"],
+        ["Stewart Platform", "stewart"],
       ],
     },
     {
@@ -70,16 +69,16 @@ const ProductPage = () => {
         ["Digital Dice Kit", "digitaldicekit"],
         ["Temperature Controlled Fan Kit", "temperaturecontrolledfankit"],
         ["Object Counter", "objectcounter"],
-        ["IoT Robot", "iotrobot"],
-        ["Knight 4.0, 5.0, 10.0", "knight"],
+        // ["IoT Robot", "iotrobot"],
+        ["Bipedal", "knight"],
       ],
     },
     {
       title: "Software",
       link: "software",
       items: [
-        ["RoboAnalyzer", "roboanalyzer"],
-        ["MechAnalyzer", "mechanalyzer"],
+        ["RoboAnalyzer(A product by IIT Delhi)", "roboanalyzer"],
+        ["MechAnalyzer(A product by IIT Delhi)", "mechanalyzer"],
         ["FEAST", "feast"],
         ["RT Tool Box Software", "rttoolboxsoftware"],
       ],
@@ -116,8 +115,8 @@ const ProductPage = () => {
                     <li key={i} className="flex items-center">
                       <span className="bg-orange-500 h-3 w-3 rounded-full inline-block mr-3"></span>
                       <Link
-                        to={`/ProductDetails/${section.link}`}
-                        // to={`/Product/${item[1]}`}
+                        // to={`/ProductDetails/${section.link}`}
+                        to={`/Product/${item[1]}`}
                         state={{ stateParam: section }}
                         className="text-lg text-black hover:text-orange-300 transition-colors duration-300"
                       >

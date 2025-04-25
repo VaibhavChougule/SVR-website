@@ -64,12 +64,12 @@ function Footer() {
           </div>
           <h1 className="text-lg font-bold mb-2">Contact Us</h1>
           <div className="space-y-2">
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <i className="far fa-envelope"></i>
               <a href="mailto:krunali@svrrobotics.com" className="hover:text-gray-400">
                 krunali@svrrobotics.com
               </a>
-            </div>
+            </div> */}
             <div className="flex items-center gap-2">
               <i className="far fa-envelope"></i>
               <a href="mailto:support@svrrobotics.com" className="hover:text-gray-400">
@@ -84,7 +84,8 @@ function Footer() {
         </div>
       </div>
       <p className="text-center text-sm text-gray-400 mt-6">
-        © {new Date().getFullYear()} SVR Robotics Pvt. Ltd. All rights reserved. Designed and Developed by <a href="https://www.linkedin.com/in/vaibhavchougule475" className='underline'>Vaibhav Chougule.</a>
+         {/* {new Date().getFullYear()} SVR Robotics Pvt. Ltd. Designed and Developed by <a href="https://www.linkedin.com/in/vaibhavchougule475" className='underline'>Vaibhav Chougule.</a> */}
+         {new Date().getFullYear()} SVR Robotics Pvt. Ltd. Designed and Developed by Vaibhav Chougule.
       </p>
       
     </footer>

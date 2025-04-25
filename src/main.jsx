@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './index.css'
 import App from './components/App.jsx'
 import ProductDetail from './components/ProductDetail.jsx'
@@ -17,9 +17,10 @@ import SpecificProduct from './components/SpecificProduct.jsx'
 import Employee from './components/Employee.jsx'
 import Client from './components/Client.jsx'
 import Chatbox from './components/Chatbox.jsx'
+import Testimonials from './components/Testimonials.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <Router>
     <Routes>
       <Route path='/' element={<App />}></Route>
       <Route path='/Products' element={<ProductPage />}></Route>
@@ -36,6 +37,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/Chatbox' element={<Chatbox />}></Route>
       <Route path='/emp/:ticketId' element={<Employee />}></Route>
       <Route path='/client/:ticketId' element={<Client />}></Route>
+      <Route path='/Testimonials' element={<Testimonials />}></Route>
     </Routes>
-  </BrowserRouter>
+  </Router>
 )

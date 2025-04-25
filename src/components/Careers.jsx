@@ -6,7 +6,7 @@ import config from "../config.js"
 const Careers = () => {
   const [selectedCategory, setSelectedCategory] = useState("View all");
   console.log(config.API_URI);
-  
+
 
   const categories = [
     "View all",
@@ -49,18 +49,20 @@ const Careers = () => {
     },
     {
       title: "Sales and Marketing Representative",
-      description: "Currently, there are no vacancies available for Electronics Engineers.",
-      location: "N/A",
-      type: "N/A",
-      category: "Sales & Marketing",
+      description: "We are seeking a dynamic and results-driven Sales and Marketing Representative to join our team. The ideal candidate will be responsible for promoting our products and services, identifying new market opportunities, and driving sales growth. You will play a key role in building strong customer relationships and contributing to our overall business success.",
+      location: "Pune, India",
+      type: "Full-Time",
+      category: "Sales & Marketing"
     },
+
     {
-      title: "Internship - Mechanical/Civil",
-      description: "Currently, there are no vacancies available for Electronics Engineers.",
-      location: "N/A",
-      type: "N/A",
-      category: "Internship",
-    },
+      title: "Internship - Mechanical",
+      description: "We are offering an exciting opportunity for Mechanical Engineering students to gain hands-on experience through our internship program. Interns will work on real-time mechanical design, prototyping, and testing projects under the guidance of our experienced engineers. This internship is ideal for those passionate about robotics, CAD modeling, and mechanical systems development.",
+      location: "Pune, India",
+      type: "Internship (Full-Time)",
+      category: "Internship"
+    }
+    ,
     {
       title: "Internship - Software Development",
       description: "Currently, there are no vacancies available for Electronics Engineers.",
@@ -70,17 +72,30 @@ const Careers = () => {
     },
     {
       title: "Internship - Software Developer",
-      description: "Currently, there are no vacancies available for Electronics Engineers.",
-      location: "N/A",
-      type: "N/A",
-      category: "Internship",
+      description: "We are looking for enthusiastic and passionate Software Developer Interns to join our development team. As an intern, you will work closely with experienced developers on real-world projects, gaining hands-on experience in software design, coding, testing, and debugging. This is a great opportunity to enhance your programming skills and learn about the software development lifecycle in a professional setting.",
+      location: "Pune, India",
+      type: "Internship (Full-Time)",
+      category: "Internship"
     },
+    
   ];
 
-  const filteredJobs =
+  const filteredJobsRaw =
     selectedCategory === "View all"
       ? jobsData
       : jobsData.filter((job) => job.category === selectedCategory);
+
+  // Separate jobs with and without vacancies
+  const jobsWithVacancies = filteredJobsRaw.filter(
+    (job) => !job.description.startsWith("Currently, there are no vacancies")
+  );
+  const jobsWithoutVacancies = filteredJobsRaw.filter(
+    (job) => job.description.startsWith("Currently, there are no vacancies")
+  );
+
+  // Merge them: vacancies first
+  const filteredJobs = [...jobsWithVacancies, ...jobsWithoutVacancies];
+
 
   return (
     <>
@@ -101,11 +116,10 @@ const Careers = () => {
           {categories.map((category) => (
             <button
               key={category}
-              className={`px-4 py-2 rounded-full ${
-                selectedCategory === category
+              className={`px-4 py-2 rounded-full ${selectedCategory === category
                   ? "bg-gray-800 text-white"
                   : "bg-gray-200 text-gray-800"
-              }`}
+                }`}
               onClick={() => setSelectedCategory(category)}
             >
               {category}

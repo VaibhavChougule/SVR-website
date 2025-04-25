@@ -44,7 +44,7 @@ function Downloads() {
         <div className="flex flex-wrap justify-center gap-12">
           {/* FEAST Section */}
           <div className="bg-white shadow-lg rounded-lg p-8 w-full md:w-[45%]">
-            <h2 className="text-3xl font-semibold text-indigo-600 mb-6">FEAST</h2>
+            <h2 className="text-3xl font-semibold text-black mb-6">FEAST</h2>
             <ul className="space-y-4">
               <li>
                 <a
@@ -98,9 +98,39 @@ function Downloads() {
 
           {/* RoboAnalyzer Section */}
           <div className="bg-white shadow-lg rounded-lg p-8 w-full md:w-[45%]">
-            <h2 className="text-3xl font-semibold text-indigo-600 mb-6">RoboAnalyzer</h2>
+            <h2 className="text-3xl font-semibold text-black mb-6">RoboAnalyzer</h2>
             <ul className="space-y-4">
               <li>
+                <a
+                  href="https://docs.google.com/forms/d/1JYAYqv6V-pCIEXBQyPNAHDlhQMpkRqHvOv_KhAmKkCs/viewform?edit_requested=true"
+                  download="RoboAnalyzer V9.0.1.zip"
+                  className="flex items-center text-lg text-blue-500 hover:text-blue-700 transition"
+                >
+                  <i className="fa-solid fa-file-arrow-down mr-4 text-indigo-500"></i>
+                  Robo Analyzer V9.0.1(Enquiry Google Form)
+                </a>
+                <div>
+                  <h2 className='font-semibold'>Steps to get trial RoboAnalyzer License</h2>
+                  <ul className='list-disc ml-4'>
+                    <li>Fill the google form above with appropriate machine Id.</li>
+                    <li>The license file will be sent to the mail id filled in the google form.</li>
+                    <li>For any queries contact <a href="mailto:sanket@svrrobotics.com" className='text'>sanket@svrrobotics.com.</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="/assets/Roboanalyzer/RoboAnalyzer_9_0_20240312.zip"
+                  download="RoboAnalyzer V9.0.1.zip"
+                  className="flex items-center text-lg text-blue-500 hover:text-blue-700 transition"
+                >
+                  <i className="fa-solid fa-file-arrow-down mr-4 text-indigo-500"></i>
+                  Robo Analyzer V9.0.1[54MB zip](Software Setup)
+                </a>
+                <p className='font-semibold'>Note: 600MB disk space required</p>
+
+              </li>
+              {/* <li>
                 <a
                   href="https://forms.gle/tL1ceYsJ3feeqHJu9"
                   download="RoboAnalyzer V8.0.1.zip"
@@ -109,7 +139,22 @@ function Downloads() {
                   <i className="fa-solid fa-file-arrow-down mr-4 text-indigo-500"></i>
                   Robo Analyzer V8.0.1
                 </a>
-              </li>
+              </li> */}
+
+              <h2 className="text-2xl font-semibold text-black mt-8 mb-4">RoboAnalyzer based Online Competition 2024</h2>
+              <ul className="space-y-4">
+                <li>
+                  <a
+                    href="/assets/pdf/ROC 2024 (1).pdf"
+                    className="flex items-center text-lg text-blue-500 hover:text-blue-700 transition"
+                  >
+                    <i className="fa-solid fa-file-arrow-down mr-4 text-indigo-500"></i>
+                    RoboAnalyzer based Online Competition (ROC-2024), July 01 - November 10, 2024
+                  </a>
+                </li>
+              </ul>
+
+              <h2 className="text-2xl font-semibold text-black mt-8 mb-4">RoboAnalyzer based Online Competition 2023</h2>
               <li>
                 <a
                   href="/assets/roboanalyzer/Report_ROC%202023.pdf"
@@ -122,23 +167,12 @@ function Downloads() {
                 </a>
               </li>
             </ul>
-            <h2 className="text-2xl font-semibold text-indigo-600 mt-8 mb-4">RoboAnalyzer 2024</h2>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="/assets/pdf/ROC 2024 (1).pdf"
-                  className="flex items-center text-lg text-blue-500 hover:text-blue-700 transition"
-                >
-                  <i className="fa-solid fa-file-arrow-down mr-4 text-indigo-500"></i>
-                  ROC 2024 PDF
-                </a>
-              </li>
-            </ul>
+
           </div>
         </div>
 
         {/* Floating PDF Viewer */}
-        <div
+        {/* <div
           className="fixed bottom-4 right-4 bg-white shadow-xl rounded-lg p-4 w-[300px] h-[400px] overflow-hidden"
         >
           <h2 className="text-xl font-bold text-gray-800 mb-2">Automation Exposouth</h2>
@@ -147,7 +181,7 @@ function Downloads() {
             className="w-full h-full border-none"
             title="PDF Viewer"
           ></iframe>
-        </div>
+        </div> */}
       </div>
 
 

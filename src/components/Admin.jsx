@@ -49,6 +49,8 @@ const Dashboard = () => {
     setSelectedCategory(category);
     setLoading(true);
     setError(null);
+    console.log("called");
+    
 
     try {
       const response = await fetch(`${config.API_URI}${categoryUrls[category]}`, {
@@ -77,6 +79,7 @@ const Dashboard = () => {
       });
 
       setPopupData(sortedData);
+      console.log("Popup data set")
     } catch (err) {
       setError("Failed to fetch data. Please try again.");
     } finally {
@@ -112,16 +115,24 @@ const Dashboard = () => {
       console.log("Engineer Assignment Sent");
 
       if (!res.ok) {
+        console.log("Response not OK:", res.statusText);
+
         throw new Error(`Failed to assign engineer. Status: ${res.status}`);
       }
 
       const data = await res.json();
-      console.log("Engineer Assignment Status:", data);
+      console.log("Engineer Assignment Statusssss:", data);
+      console.log("hello:" , selectedCategory);
+      
+      const reloadData =  handleCategoryClick(selectedCategory); // Refresh the data after assignment
+      console.log("Reloaded Data:", reloadData);
+
     } catch (error) {
       console.error("Error while assigning engineer:", error.message);
     }
     finally {
       setLoading(false);
+
     }
   };
 
@@ -165,7 +176,7 @@ const Dashboard = () => {
             </table>
           </div>
         );
-  
+
       case "ProductDetails":
         return (
           <div className="p-6 bg-slate-700 rounded shadow-md">
@@ -177,7 +188,7 @@ const Dashboard = () => {
             </ul>
           </div>
         );
-  
+
       case "TrainingWorkshop":
         return (
           <div className="p-6 bg-slate-700 rounded shadow-md">
@@ -190,7 +201,7 @@ const Dashboard = () => {
             </ul>
           </div>
         );
-  
+
       case "SetupCosting":
         return (
           <div className="p-6 bg-slate-700 rounded shadow-md">
@@ -213,7 +224,7 @@ const Dashboard = () => {
             </table>
           </div>
         );
-  
+
       case "JobApplications":
         return (
           <div className="p-6 bg-slate-700 rounded shadow-md">
@@ -226,12 +237,12 @@ const Dashboard = () => {
             </ul>
           </div>
         );
-  
+
       default:
         return <p className="text-white text-center">Select a category to view details.</p>;
     }
   };
-  
+
 
   if (!isAuthenticated) {
     return (
@@ -289,15 +300,15 @@ const Dashboard = () => {
           </button>
         ))}
       </div>
-  
+
       {loading && <h1 className="text-center">Loading...</h1>}
       {error && <p className="text-red-500 text-center">{error}</p>}
-  
+
       {/* Display different content based on selected category */}
       {renderContent()}
     </div>
   );
-  
+
 };
 
 export default Dashboard;
